@@ -77,7 +77,7 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (void)waveDrawer:(ANWaveDrawer *)waveDrawer drewWave:(ANDrawnWave *)aWave {
@@ -112,7 +112,8 @@
 
 - (void)audioThread {
     @autoreleasepool {
-        sampleOutput = [[ANSampleOutput alloc] initWithSampleRate:11025 bufferTime:0.1];
+        sampleOutput = [[ANSampleOutput alloc] initWithSampleRate:11025 bufferTime:0.25];
+        [sampleOutput setFrequency:440];
         [[NSRunLoop currentRunLoop] run];
     }
 }

@@ -22,7 +22,7 @@ void ANSampleOutputBufferCallback (void * inUserData, AudioQueueRef inAQ, AudioQ
 - (id)initWithSampleRate:(NSUInteger)rate bufferTime:(NSTimeInterval)aPeriod {
     if ((self = [super init])) {
         sampleRate = rate;
-        frequency = 600;
+        frequency = 440;
         // TODO: create sample buffer
         
         audioFormat.mFormatID = kAudioFormatLinearPCM;
@@ -61,6 +61,8 @@ void ANSampleOutputBufferCallback (void * inUserData, AudioQueueRef inAQ, AudioQ
 }
 
 - (BOOL)startPlayer {
+    lastUpdate = [NSDate date];
+    [sampleBuffer setOffset:0];
     for (int i = 0; i < kBufferCount; i++) {
         [self queueToBuffer:buffers[i]];
     }
@@ -72,7 +74,8 @@ void ANSampleOutputBufferCallback (void * inUserData, AudioQueueRef inAQ, AudioQ
 }
 
 - (void)stopPlayer {
-    AudioQueueStop(audioQueue, YES);
+    AudioQueueReset(audioQueue);
+    AudioQueueStop(audioQueue, NO);
 }
 
 - (void)setFrequency:(NSUInteger)number {
@@ -89,9 +92,11 @@ void ANSampleOutputBufferCallback (void * inUserData, AudioQueueRef inAQ, AudioQ
 }
 
 - (void)queueToBuffer:(AudioQueueBufferRef)buffer {
+    NSLog(@"Buffer: %p", buffer);
     Float32 * samples = (Float32 *)buffer->mAudioData;
     [sampleBuffer fillRemainingWithFrequency:frequency];
     [sampleBuffer setOffset:0];
+    lastUpdate = [NSDate date];
     memcpy((void *)samples, (void *)sampleBuffer.samples, framesPerBuffer * audioFormat.mBytesPerFrame);
     
     buffer->mAudioDataByteSize = framesPerBuffer * audioFormat.mBytesPerFrame;

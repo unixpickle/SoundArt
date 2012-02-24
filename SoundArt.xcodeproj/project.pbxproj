@@ -22,6 +22,7 @@
 		FA13FEA914F703E7003ED554 /* ANDrawnWave.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FEA814F703E7003ED554 /* ANDrawnWave.m */; };
 		FA13FEAB14F70CAB003ED554 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA13FEAA14F70CAB003ED554 /* AudioToolbox.framework */; };
 		FA13FEAE14F716A8003ED554 /* ANPointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FEAD14F716A8003ED554 /* ANPointArray.m */; };
+		FA13FEB014F7237F003ED554 /* filler@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA13FEAF14F7237F003ED554 /* filler@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FA13FEAA14F70CAB003ED554 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FA13FEAC14F716A7003ED554 /* ANPointArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPointArray.h; sourceTree = "<group>"; };
 		FA13FEAD14F716A8003ED554 /* ANPointArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPointArray.m; sourceTree = "<group>"; };
+		FA13FEAF14F7237F003ED554 /* filler@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filler@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		FA13FE7E14F70348003ED554 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA13FEAF14F7237F003ED554 /* filler@2x.png */,
 				FA13FE8C14F70348003ED554 /* ANViewController.xib */,
 				FA13FE7F14F70348003ED554 /* SoundArt-Info.plist */,
 				FA13FE8014F70348003ED554 /* InfoPlist.strings */,
@@ -210,6 +213,7 @@
 			files = (
 				FA13FE8214F70348003ED554 /* InfoPlist.strings in Resources */,
 				FA13FE8E14F70348003ED554 /* ANViewController.xib in Resources */,
+				FA13FEB014F7237F003ED554 /* filler@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,10 +306,17 @@
 		FA13FE9214F70348003ED554 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Nichol (N2HK2M4K3L)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SoundArt/SoundArt-Prefix.pch";
 				INFOPLIST_FILE = "SoundArt/SoundArt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5585EF95-DB13-462D-822F-C9FAD1A574F2";
+				SDKROOT = iphoneos5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -313,10 +324,17 @@
 		FA13FE9314F70348003ED554 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Charles Nichol (N2HK2M4K3L)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SoundArt/SoundArt-Prefix.pch";
 				INFOPLIST_FILE = "SoundArt/SoundArt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5585EF95-DB13-462D-822F-C9FAD1A574F2";
+				SDKROOT = iphoneos5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

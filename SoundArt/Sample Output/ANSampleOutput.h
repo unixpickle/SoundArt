@@ -10,7 +10,7 @@
 #import "ANSampleBuffer.h"
 #import "ANSineWaveGenerator.h"
 
-#define kBufferCount 2
+#define kBufferCount 4
 
 @interface ANSampleOutput : NSObject {
     AudioStreamBasicDescription audioFormat;

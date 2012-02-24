@@ -50,47 +50,55 @@
 #pragma mark Raw
 
 - (NSUInteger)numberOfPoints {
-    return pointCount;
+    @synchronized (self) {
+        return pointCount;
+    }
 }
 
 - (ANDrawnWavePoint)pointAtIndex:(NSUInteger)point {
-    return points[point];
+    @synchronized (self) {
+        return points[point];
+    }
 }
 
 #pragma mark Amplitudes
 
 - (CGFloat)amplitudeForRelativeX:(CGFloat)x {
-    for (NSUInteger i = 0; i < pointCount; i++) {
-        if (points[i].x == x) {
-            return points[i].amplitude;
-        } else if (points[i].x > x) {
-            if (i == 0) {
+    @synchronized (self) {
+        for (NSUInteger i = 0; i < pointCount; i++) {
+            if (points[i].x == x) {
                 return points[i].amplitude;
-            } else {
-                CGFloat lowAmp = points[i - 1].amplitude;
-                CGFloat highAmp = points[i].amplitude;
-                CGFloat lowX = points[i - 1].x;
-                CGFloat highX = points[i].x;
-                CGFloat percentage = (x - lowX) / (highX - lowX);
-                return lowAmp + (highAmp - lowAmp) * percentage;
+            } else if (points[i].x > x) {
+                if (i == 0) {
+                    return points[i].amplitude;
+                } else {
+                    CGFloat lowAmp = points[i - 1].amplitude;
+                    CGFloat highAmp = points[i].amplitude;
+                    CGFloat lowX = points[i - 1].x;
+                    CGFloat highX = points[i].x;
+                    CGFloat percentage = (x - lowX) / (highX - lowX);
+                    return lowAmp + (highAmp - lowAmp) * percentage;
+                }
             }
         }
+        return 0;
     }
-    return 0;
 }
 
 - (Float32)amplitudeForX:(float *)x {
-    if (pointCount == 0) return 0;
-    if (pointCount == 1) return points[0].amplitude;
-    
-    while (*x > 1) {
-        *x -= 1;
+    @synchronized (self) {
+        if (pointCount == 0) return 0;
+        if (pointCount == 1) return points[0].amplitude;
+        
+        while (*x > 1) {
+            *x -= 1;
+        }
+        
+        CGFloat minX = points[0].x;
+        CGFloat maxX = points[pointCount - 1].x;
+        float relX = *x * (maxX - minX) + minX;
+        return (Float32)[self amplitudeForRelativeX:relX];
     }
-    
-    CGFloat minX = points[0].x;
-    CGFloat maxX = points[pointCount - 1].x;
-    float relX = *x * (maxX - minX) + minX;
-    return (Float32)[self amplitudeForRelativeX:relX];
 }
 
 #pragma mark - Misc -

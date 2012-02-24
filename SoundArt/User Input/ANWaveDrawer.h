@@ -25,10 +25,10 @@
     CGFloat lastX;
     ANPointArray * touchPoints;
     
-    __weak id<ANWaveDrawerDelegate> delegate;
+    __unsafe_unretained id<ANWaveDrawerDelegate> delegate;
 }
 
-@property (nonatomic, weak) id<ANWaveDrawerDelegate> delegate;
+@property (nonatomic, assign) id<ANWaveDrawerDelegate> delegate;
 
 - (id)initWithFrame:(CGRect)frame;
 - (void)setWave:(ANDrawnWave *)aWave;

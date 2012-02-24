@@ -15,6 +15,13 @@
 		FA13FE8814F70348003ED554 /* ANAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FE8714F70348003ED554 /* ANAppDelegate.m */; };
 		FA13FE8B14F70348003ED554 /* ANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FE8A14F70348003ED554 /* ANViewController.m */; };
 		FA13FE8E14F70348003ED554 /* ANViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA13FE8C14F70348003ED554 /* ANViewController.xib */; };
+		FA13FE9D14F70391003ED554 /* ANSampleBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FE9614F70391003ED554 /* ANSampleBuffer.m */; };
+		FA13FE9E14F70391003ED554 /* ANSampleOutput.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA13FE9814F70391003ED554 /* ANSampleOutput.mm */; };
+		FA13FE9F14F70391003ED554 /* ANSineWaveGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FE9B14F70391003ED554 /* ANSineWaveGenerator.m */; };
+		FA13FEA614F703D7003ED554 /* ANWaveDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FEA514F703D7003ED554 /* ANWaveDrawer.m */; };
+		FA13FEA914F703E7003ED554 /* ANDrawnWave.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FEA814F703E7003ED554 /* ANDrawnWave.m */; };
+		FA13FEAB14F70CAB003ED554 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA13FEAA14F70CAB003ED554 /* AudioToolbox.framework */; };
+		FA13FEAE14F716A8003ED554 /* ANPointArray.m in Sources */ = {isa = PBXBuildFile; fileRef = FA13FEAD14F716A8003ED554 /* ANPointArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +29,29 @@
 		FA13FE7714F70347003ED554 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA13FE7914F70347003ED554 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA13FE7B14F70347003ED554 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FA13FE7F14F70348003ED554 /* SoundArt-Info.plist */ = {isa = PBXFileReference; path = "SoundArt-Info.plist"; sourceTree = "<group>"; };
+		FA13FE7F14F70348003ED554 /* SoundArt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SoundArt-Info.plist"; sourceTree = "<group>"; };
 		FA13FE8114F70348003ED554 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA13FE8314F70348003ED554 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA13FE8514F70348003ED554 /* SoundArt-Prefix.pch */ = {isa = PBXFileReference; path = "SoundArt-Prefix.pch"; sourceTree = "<group>"; };
-		FA13FE8614F70348003ED554 /* ANAppDelegate.h */ = {isa = PBXFileReference; path = ANAppDelegate.h; sourceTree = "<group>"; };
+		FA13FE8514F70348003ED554 /* SoundArt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoundArt-Prefix.pch"; sourceTree = "<group>"; };
+		FA13FE8614F70348003ED554 /* ANAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANAppDelegate.h; sourceTree = "<group>"; };
 		FA13FE8714F70348003ED554 /* ANAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANAppDelegate.m; sourceTree = "<group>"; };
-		FA13FE8914F70348003ED554 /* ANViewController.h */ = {isa = PBXFileReference; path = ANViewController.h; sourceTree = "<group>"; };
+		FA13FE8914F70348003ED554 /* ANViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANViewController.h; sourceTree = "<group>"; };
 		FA13FE8A14F70348003ED554 /* ANViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANViewController.m; sourceTree = "<group>"; };
 		FA13FE8D14F70348003ED554 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ANViewController.xib; sourceTree = "<group>"; };
+		FA13FE9514F70391003ED554 /* ANSampleBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSampleBuffer.h; sourceTree = "<group>"; };
+		FA13FE9614F70391003ED554 /* ANSampleBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSampleBuffer.m; sourceTree = "<group>"; };
+		FA13FE9714F70391003ED554 /* ANSampleOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSampleOutput.h; sourceTree = "<group>"; };
+		FA13FE9814F70391003ED554 /* ANSampleOutput.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ANSampleOutput.mm; sourceTree = "<group>"; };
+		FA13FE9A14F70391003ED554 /* ANSineWaveGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANSineWaveGenerator.h; sourceTree = "<group>"; };
+		FA13FE9B14F70391003ED554 /* ANSineWaveGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANSineWaveGenerator.m; sourceTree = "<group>"; };
+		FA13FE9C14F70391003ED554 /* ANWaveGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANWaveGenerator.h; sourceTree = "<group>"; };
+		FA13FEA414F703D7003ED554 /* ANWaveDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANWaveDrawer.h; sourceTree = "<group>"; };
+		FA13FEA514F703D7003ED554 /* ANWaveDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANWaveDrawer.m; sourceTree = "<group>"; };
+		FA13FEA714F703E7003ED554 /* ANDrawnWave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANDrawnWave.h; sourceTree = "<group>"; };
+		FA13FEA814F703E7003ED554 /* ANDrawnWave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANDrawnWave.m; sourceTree = "<group>"; };
+		FA13FEAA14F70CAB003ED554 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FA13FEAC14F716A7003ED554 /* ANPointArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPointArray.h; sourceTree = "<group>"; };
+		FA13FEAD14F716A8003ED554 /* ANPointArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPointArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA13FEAB14F70CAB003ED554 /* AudioToolbox.framework in Frameworks */,
 				FA13FE7814F70347003ED554 /* UIKit.framework in Frameworks */,
 				FA13FE7A14F70347003ED554 /* Foundation.framework in Frameworks */,
 				FA13FE7C14F70347003ED554 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +89,7 @@
 		FA13FE7614F70347003ED554 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA13FEAA14F70CAB003ED554 /* AudioToolbox.framework */,
 				FA13FE7714F70347003ED554 /* UIKit.framework */,
 				FA13FE7914F70347003ED554 /* Foundation.framework */,
 				FA13FE7B14F70347003ED554 /* CoreGraphics.framework */,
@@ -77,11 +100,12 @@
 		FA13FE7D14F70347003ED554 /* SoundArt */ = {
 			isa = PBXGroup;
 			children = (
+				FA13FEA314F703D7003ED554 /* User Input */,
+				FA13FE9414F70391003ED554 /* Sample Output */,
 				FA13FE8614F70348003ED554 /* ANAppDelegate.h */,
 				FA13FE8714F70348003ED554 /* ANAppDelegate.m */,
 				FA13FE8914F70348003ED554 /* ANViewController.h */,
 				FA13FE8A14F70348003ED554 /* ANViewController.m */,
-				FA13FE8C14F70348003ED554 /* ANViewController.xib */,
 				FA13FE7E14F70348003ED554 /* Supporting Files */,
 			);
 			path = SoundArt;
@@ -90,12 +114,48 @@
 		FA13FE7E14F70348003ED554 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA13FE8C14F70348003ED554 /* ANViewController.xib */,
 				FA13FE7F14F70348003ED554 /* SoundArt-Info.plist */,
 				FA13FE8014F70348003ED554 /* InfoPlist.strings */,
 				FA13FE8314F70348003ED554 /* main.m */,
 				FA13FE8514F70348003ED554 /* SoundArt-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA13FE9414F70391003ED554 /* Sample Output */ = {
+			isa = PBXGroup;
+			children = (
+				FA13FE9914F70391003ED554 /* Wave Generator */,
+				FA13FE9514F70391003ED554 /* ANSampleBuffer.h */,
+				FA13FE9614F70391003ED554 /* ANSampleBuffer.m */,
+				FA13FE9714F70391003ED554 /* ANSampleOutput.h */,
+				FA13FE9814F70391003ED554 /* ANSampleOutput.mm */,
+			);
+			path = "Sample Output";
+			sourceTree = "<group>";
+		};
+		FA13FE9914F70391003ED554 /* Wave Generator */ = {
+			isa = PBXGroup;
+			children = (
+				FA13FE9C14F70391003ED554 /* ANWaveGenerator.h */,
+				FA13FE9A14F70391003ED554 /* ANSineWaveGenerator.h */,
+				FA13FE9B14F70391003ED554 /* ANSineWaveGenerator.m */,
+			);
+			path = "Wave Generator";
+			sourceTree = "<group>";
+		};
+		FA13FEA314F703D7003ED554 /* User Input */ = {
+			isa = PBXGroup;
+			children = (
+				FA13FEA414F703D7003ED554 /* ANWaveDrawer.h */,
+				FA13FEA514F703D7003ED554 /* ANWaveDrawer.m */,
+				FA13FEA714F703E7003ED554 /* ANDrawnWave.h */,
+				FA13FEA814F703E7003ED554 /* ANDrawnWave.m */,
+				FA13FEAC14F716A7003ED554 /* ANPointArray.h */,
+				FA13FEAD14F716A8003ED554 /* ANPointArray.m */,
+			);
+			path = "User Input";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +223,12 @@
 				FA13FE8414F70348003ED554 /* main.m in Sources */,
 				FA13FE8814F70348003ED554 /* ANAppDelegate.m in Sources */,
 				FA13FE8B14F70348003ED554 /* ANViewController.m in Sources */,
+				FA13FE9D14F70391003ED554 /* ANSampleBuffer.m in Sources */,
+				FA13FE9E14F70391003ED554 /* ANSampleOutput.mm in Sources */,
+				FA13FE9F14F70391003ED554 /* ANSineWaveGenerator.m in Sources */,
+				FA13FEA614F703D7003ED554 /* ANWaveDrawer.m in Sources */,
+				FA13FEA914F703E7003ED554 /* ANDrawnWave.m in Sources */,
+				FA13FEAE14F716A8003ED554 /* ANPointArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
